@@ -1,0 +1,49 @@
+.sales {
+  padding: 100px 0;
+}
+
+.sales__img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.sales__header {
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-right: 15px;
+  margin-bottom: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 85px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+  }
+}
+
+.sales__text {
+  font-size: 14px;
+  line-height: 24px;
+  padding-right: 20px;
+  margin-bottom: 40px;
+}
+
+.sales__btn {
+  width: 220px;
+  height: 50px;
+  border: none;
+  background: #010001;
+
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
+}
