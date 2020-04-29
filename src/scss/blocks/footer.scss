@@ -1,0 +1,23 @@
+.footer {
+  padding-bottom: 30px;
+}
+
+.footer__menu {
+  list-style: none;
+}
+
+.footer__nav {
+  border-top: 1px solid rgba(255, 255, 255 , .3);
+  padding-top: 30px;
+  margin-bottom: 40px;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255 , .3);
+  display: block;
+  text-align: center;
+}

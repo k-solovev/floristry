@@ -112,14 +112,62 @@
 
       <section class="sales">
         <div class="container">
-          <img class="sales__img" src="../img/sales_img_mobile.jpg" alt="Картинка акционных предложений">
+          <img
+            class="sales__img"
+            src="../img/sales_img_mobile.jpg"
+            alt="Картинка акционных предложений"
+          />
           <h2 class="sales__header">Акционные предложения</h2>
-          <p class="sales__text">При заказе свадебного оформления предоставляется скидка на&nbsp;букет невесты и&nbsp;бутоньерку в&nbsp;размере&nbsp;30%</p>
+          <p class="sales__text">
+            При заказе свадебного оформления предоставляется скидка
+            на&nbsp;букет невесты и&nbsp;бутоньерку в&nbsp;размере&nbsp;30%
+          </p>
           <button class="sales__btn">Заказать оформление</button>
         </div>
       </section>
     </main>
-    <footer class="footer"></footer>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__nav">
+          <ul class="footer__menu">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Свадебная флористика</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link"
+                >Букеты на&nbsp;любые мероприятия</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Букеты невесты</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Композиции</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Оформление мероприятий</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social social">
+          <a class="social__btn social__btn--im" href="#"></a>
+          <a class="social__btn social__btn--fb" href="#"></a>
+          <a class="social__btn social__btn--wa" href="#"></a>
+          <a class="social__btn social__btn--vk" href="#"></a>
+        </div>
+      </div>
+    </footer>
+
+    <section class="popup-order">
+      <span class="popup-order__close"></span>
+      <h2 class="popup-order__header">Оставьте свой номер и&nbsp;мы&nbsp;вам перезвоним!</h2>
+      <form class="popup-order__form" action="post">
+        <input class="popup-order__input popup-order__input--name" type="text" placeholder="Имя">
+        <input class="popup-order__input popup-order__input--tel" type="text" placeholder="Телефон">
+        <button class="popup-order-btn">Позвоните мне</button>
+      </form>
+    </section>
     <script src="js/main.js"></script>
   </body>
 </html>
