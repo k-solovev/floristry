@@ -1,11 +1,24 @@
 .promo {
   width: 100%;
-  height: 700px;
+  min-height: 466px;
   background-image: url("../img/promo_bg_mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.promo__arrow {
+  display: block;
+  width: 14px;
+  height: 21px;
+  background-image: url("../img/promo_arrow_mobile.svg");
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.promo__wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .promo__header {
@@ -31,4 +44,8 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 70px;
+}
+
+.promo__social {
+  margin-bottom: 30px;
 }

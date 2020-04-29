@@ -1,5 +1,6 @@
 body {
   font-family: "Forum", "Aerial", sans-serif;
+  background-color: $main-color;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -21,6 +22,13 @@ button,
 button:active, 
 button:focus {
     outline: none;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .visually-hidden {

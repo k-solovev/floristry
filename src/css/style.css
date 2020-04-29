@@ -318,6 +318,7 @@ template {
 
 body {
   font-family: "Forum", "Aerial", sans-serif;
+  background-color: #3B181E;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -336,6 +337,12 @@ button,
 button:active,
 button:focus {
   outline: none; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px; }
 
 .visually-hidden {
   position: absolute;
@@ -361,13 +368,13 @@ button:focus {
     background-color: #3B181E;
     width: 100%;
     height: 60px;
-    z-index: 1; }
+    z-index: 2; }
 
 .header__logo {
   position: absolute;
   top: 15px;
   left: 30px;
-  z-index: 1;
+  z-index: 2;
   transition: .6s all ease-in; }
   .header__logo--active {
     top: 25px;
@@ -380,7 +387,7 @@ button:focus {
   height: 10px;
   top: 26px;
   right: 30px;
-  z-index: 1; }
+  z-index: 2; }
   .header__burger::before, .header__burger::after {
     content: "";
     width: 100%;
@@ -405,6 +412,7 @@ button:focus {
   width: 100%;
   position: absolute;
   left: 0;
+  z-index: 1;
   top: -500px;
   transition: .6s all ease-in; }
   .header__navigation--active {
@@ -439,12 +447,23 @@ button:focus {
 
 .promo {
   width: 100%;
-  height: 700px;
+  min-height: 466px;
   background-image: url("../img/promo_bg_mobile.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; }
+
+.promo__arrow {
+  display: block;
+  width: 14px;
+  height: 21px;
+  background-image: url("../img/promo_arrow_mobile.svg");
+  margin-left: auto;
+  margin-right: auto; }
+
+.promo__wrapper {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
 
 .promo__header {
   font-family: "Playfair Display", "Aerial", sans-serif;
@@ -469,6 +488,9 @@ button:focus {
   margin-right: auto;
   margin-bottom: 70px; }
 
+.promo__social {
+  margin-bottom: 30px; }
+
 .social {
   display: flex;
   justify-content: center; }
@@ -490,5 +512,59 @@ button:focus {
     background-image: url("../img/vk_icon.svg"); }
   .social__btn:last-child {
     margin-right: 0; }
+
+.catalog {
+  padding-top: 100px; }
+
+.catalog__header {
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0.06em;
+  margin-bottom: 20px; }
+
+.slider__window {
+  margin-bottom: 20px; }
+
+.slider__elem {
+  position: relative; }
+
+.slider__img {
+  width: 100%; }
+
+.slider__num {
+  font-size: 20px;
+  line-height: 22px;
+  position: absolute;
+  top: 23px;
+  left: 100px; }
+  .slider__num:before {
+    content: "";
+    width: 70px;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    left: -80px; }
+
+.slider__text {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.1em; }
+
+.slider__control {
+  display: flex;
+  justify-content: space-between; }
+
+.slider__btn {
+  display: block;
+  border-radius: 2px;
+  width: 55px;
+  height: 3px;
+  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */

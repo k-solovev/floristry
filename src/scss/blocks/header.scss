@@ -13,7 +13,7 @@
     background-color: $main-color;
     width: 100%;
     height: 60px;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -21,7 +21,7 @@
   position: absolute;
   top: 15px;
   left: 30px;
-  z-index: 1;
+  z-index: 2;
   transition: .6s all ease-in;
 
   &--active {
@@ -37,7 +37,7 @@
   height: 10px;
   top: 26px;
   right: 30px;
-  z-index: 1;
+  z-index: 2;
 
   &::before,
   &::after {
@@ -76,6 +76,7 @@
   width: 100%;
   position: absolute;
   left: 0;
+  z-index: 1;
   top: -500px;
   transition: .6s all ease-in;
 
