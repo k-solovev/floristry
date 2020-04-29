@@ -1,0 +1,35 @@
+body {
+  font-family: "Forum", "Aerial", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+  color: white;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

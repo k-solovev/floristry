@@ -1,0 +1,33 @@
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu__item {
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.09em;
+  display: inline-block;
+  width: 170px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  opacity: .5;
+
+  &:first-child {
+    margin-top: 70px;
+  }
+
+  &--active {
+    font-size: 25px;
+    line-height: 28px;
+    opacity: 1;
+  }
+}
+
+.menu__link {
+  color: white;
+}

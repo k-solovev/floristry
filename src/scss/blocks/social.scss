@@ -1,0 +1,33 @@
+.social {
+  display: flex;
+  justify-content: center;
+}
+
+.social__btn {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-color: $main-color;
+  border-radius: 50%;
+  margin-right: 40px;
+
+  &--im {
+    background-image: url("../img/im_icon.svg");
+  }
+
+  &--fb {
+    background-image: url("../img/fb_icon.svg");
+  }
+
+  &--wa {
+    background-image: url("../img/wa_icon.svg");
+  }
+
+  &--vk {
+    background-image: url("../img/vk_icon.svg");
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
