@@ -41,6 +41,9 @@
 .slider__control {
   display: flex;
   justify-content: space-between;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slider__btn {

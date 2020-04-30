@@ -1,6 +1,5 @@
 body {
   font-family: "Forum", "Aerial", sans-serif;
-  background-color: $main-color;
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -29,6 +28,11 @@ button:focus {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 .overlay {

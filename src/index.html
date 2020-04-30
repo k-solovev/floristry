@@ -112,11 +112,14 @@
 
       <section class="sales">
         <div class="container">
-          <img
-            class="sales__img"
-            src="../img/sales_img_mobile.jpg"
-            alt="Картинка акционных предложений"
-          />
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/sales_img_tablet.jpg">
+            <img
+              class="sales__img"
+              src="../img/sales_img_mobile.jpg"
+              alt="Картинка акционных предложений"
+            />
+          </picture>
           <h2 class="sales__header">Акционные предложения</h2>
           <p class="sales__text">
             При заказе свадебного оформления предоставляется скидка
@@ -162,10 +165,20 @@
     <div class="overlay visually-hidden">
       <section class="popup-order">
         <span class="popup-order__close"></span>
-        <h2 class="popup-order__header">Оставьте свой номер и&nbsp;мы&nbsp;вам перезвоним!</h2>
+        <h2 class="popup-order__header">
+          Оставьте свой номер и&nbsp;мы&nbsp;вам перезвоним!
+        </h2>
         <form class="popup-order__form" action="post">
-          <input class="popup-order__input popup-order__input--name" type="text" placeholder="Имя">
-          <input class="popup-order__input popup-order__input--tel" type="text" placeholder="Телефон">
+          <input
+            class="popup-order__input popup-order__input--name"
+            type="text"
+            placeholder="Имя"
+          />
+          <input
+            class="popup-order__input popup-order__input--tel"
+            type="text"
+            placeholder="Телефон"
+          />
           <button class="popup-order-btn">Позвоните мне</button>
         </form>
       </section>

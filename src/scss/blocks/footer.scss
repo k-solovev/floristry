@@ -1,5 +1,10 @@
 .footer {
+  background-color: $main-color;
   padding-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .footer__menu {
@@ -14,10 +19,16 @@
 
 .footer__item {
   margin-bottom: 10px;
+  display: flex;
 }
 
 .footer__link {
   color: rgba(255, 255, 255 , .3);
-  display: block;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

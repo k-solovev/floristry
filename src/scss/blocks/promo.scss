@@ -1,9 +1,16 @@
 .promo {
   width: 100%;
   min-height: 466px;
+  background-color: $main-color;
   background-image: url("../img/promo_bg_mobile.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/promo_bg_tablet.jpg");
+    margin-top: -60px;
+    min-height: 1024px;
+  }
 }
 
 .promo__arrow {
@@ -30,6 +37,14 @@
   text-transform: uppercase;
   margin-top: 103px;
   margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    font-family: "Forum", "Aerial", sans-serif;
+    font-size: 70px;
+    line-height: 77px;
+    margin-top: 331px;
+    margin-bottom: 82px;
+  }
 }
 
 .promo__link {
@@ -44,8 +59,16 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 211px;
+  }
 }
 
 .promo__social {
   margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
 }

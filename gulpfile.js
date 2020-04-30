@@ -27,6 +27,7 @@ gulp.task('server', function () {
       notify: false
     }
   })
+
   browserSync.watch('src/scss/**/*.scss', gulp.series('css'));
   browserSync.watch('src/*.html').on('change', browserSync.reload);
 });
