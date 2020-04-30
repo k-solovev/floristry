@@ -7,6 +7,12 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    width: 464px;
+    min-height: 640px;
+    padding: 104px 78px 45px;
+  }
 }
 
 .popup-order__close {
@@ -44,6 +50,13 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 15px;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 70px;
+  }
 }
 
 .popup-order__input {
@@ -54,15 +67,28 @@
   margin-bottom: 17px;
   padding-left: 22px;
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+
   &::-webkit-input-placeholder {
     color: white;
     font-size: 14px;
     line-height: 15px;
     letter-spacing: -0.01em;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 
   &:last-of-type {
     margin-bottom: 27px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
   }
 
   &:focus {
@@ -81,4 +107,9 @@
   text-transform: uppercase;
   color: black;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+    line-height: 17px;
+  }
 }

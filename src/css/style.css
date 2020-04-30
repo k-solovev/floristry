@@ -744,6 +744,11 @@ button:focus {
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: #3B181E; }
+  @media (min-width: 768px) {
+    .popup-order {
+      width: 464px;
+      min-height: 640px;
+      padding: 104px 78px 45px; } }
 
 .popup-order__close {
   width: 40px;
@@ -772,6 +777,12 @@ button:focus {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   margin-bottom: 50px; }
+  @media (min-width: 768px) {
+    .popup-order__header {
+      padding: 0 15px;
+      font-size: 30px;
+      line-height: 50px;
+      margin-bottom: 70px; } }
 
 .popup-order__input {
   width: 100%;
@@ -780,13 +791,23 @@ button:focus {
   background-color: #3B181E;
   margin-bottom: 17px;
   padding-left: 22px; }
+  @media (min-width: 768px) {
+    .popup-order__input {
+      margin-bottom: 24px; } }
   .popup-order__input::-webkit-input-placeholder {
     color: white;
     font-size: 14px;
     line-height: 15px;
     letter-spacing: -0.01em; }
+    @media (min-width: 768px) {
+      .popup-order__input::-webkit-input-placeholder {
+        font-size: 20px;
+        line-height: 22px; } }
   .popup-order__input:last-of-type {
     margin-bottom: 27px; }
+    @media (min-width: 768px) {
+      .popup-order__input:last-of-type {
+        margin-bottom: 40px; } }
   .popup-order__input:focus {
     outline: none;
     background-color: white; }
@@ -801,5 +822,9 @@ button:focus {
   text-transform: uppercase;
   color: black;
   border: none; }
+  @media (min-width: 768px) {
+    .popup-order-btn {
+      font-size: 15px;
+      line-height: 17px; } }
 
 /*# sourceMappingURL=style.css.map */
