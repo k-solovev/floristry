@@ -4,7 +4,9 @@
   padding: 62px 20px 52px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $main-color;
 }
 
 .popup-order__close {

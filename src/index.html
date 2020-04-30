@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Весна всегда</title>
   </head>
-  <body>
+  <body class="document-body">
     <header class="header">
       <div class="header__logo">
         <a class="header__link" href="#">
@@ -159,15 +159,17 @@
       </div>
     </footer>
 
-    <section class="popup-order">
-      <span class="popup-order__close"></span>
-      <h2 class="popup-order__header">Оставьте свой номер и&nbsp;мы&nbsp;вам перезвоним!</h2>
-      <form class="popup-order__form" action="post">
-        <input class="popup-order__input popup-order__input--name" type="text" placeholder="Имя">
-        <input class="popup-order__input popup-order__input--tel" type="text" placeholder="Телефон">
-        <button class="popup-order-btn">Позвоните мне</button>
-      </form>
-    </section>
+    <div class="overlay visually-hidden">
+      <section class="popup-order">
+        <span class="popup-order__close"></span>
+        <h2 class="popup-order__header">Оставьте свой номер и&nbsp;мы&nbsp;вам перезвоним!</h2>
+        <form class="popup-order__form" action="post">
+          <input class="popup-order__input popup-order__input--name" type="text" placeholder="Имя">
+          <input class="popup-order__input popup-order__input--tel" type="text" placeholder="Телефон">
+          <button class="popup-order-btn">Позвоните мне</button>
+        </form>
+      </section>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
