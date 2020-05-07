@@ -11,6 +11,24 @@
     margin-top: -60px;
     min-height: 1024px;
   }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/promo_bg_desktop.jpg");
+    min-height: 1019px;
+    position: relative;
+  }
+
+  &::before {
+    @media (min-width: $desktop-width) {
+      content: "";
+      width: 100%;
+      height: 75px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: url("../img/promo-stroke_desktop.png");
+    }
+  }
 }
 
 .promo__arrow {
@@ -20,6 +38,38 @@
   background-image: url("../img/promo_arrow_mobile.svg");
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    transition: .3s all linear;
+  }
+
+  &:hover {
+    bottom: 0;
+  }
+
+  &:hover:before {
+    bottom: 120px;
+  }
+
+  &:before {
+    @media (min-width: $desktop-width) {
+      transition: .3s all linear;
+      content: "смотреть каталог";
+      position: absolute;
+      width: 165px;
+      height: 22px;
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: 0.06em;
+      bottom: 110px;
+      left: -74px;
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .promo__wrapper {
@@ -29,7 +79,6 @@
 }
 
 .promo__header {
-  font-family: "Playfair Display", "Aerial", sans-serif;
   font-size: 30px;
   line-height: 42px;
   text-align: center;
@@ -39,11 +88,18 @@
   margin-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    font-family: "Forum", "Aerial", sans-serif;
     font-size: 70px;
     line-height: 77px;
     margin-top: 331px;
     margin-bottom: 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 120px;
+    line-height: 132px;
+    width: 818px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -63,6 +119,16 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 211px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  &:hover {
+    background: white;
+    color: black;
+  }
 }
 
 .promo__social {
@@ -70,5 +136,26 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.promo__mouse {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

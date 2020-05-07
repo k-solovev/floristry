@@ -4,27 +4,43 @@
 }
 
 .social__btn {
-  display: block;
+  display: flex;
   width: 35px;
   height: 35px;
   background-color: $main-color;
   border-radius: 50%;
   margin-right: 40px;
 
-  &--im {
-    background-image: url("../img/im_icon.svg");
+  @media (min-width: $tablet-width) {
+    width: 55px;
+    height: 55px;
   }
 
-  &--fb {
-    background-image: url("../img/fb_icon.svg");
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
   }
 
-  &--wa {
-    background-image: url("../img/wa_icon.svg");
+  &:hover .icon-hover {
+    fill: black;
+    stroke: black;
   }
 
-  &--vk {
-    background-image: url("../img/vk_icon.svg");
+  & svg {
+    width: 18px;
+    height: 18px;
+    margin: auto;
+
+    @media (min-width: $tablet-width) {
+      width: 28px;
+      height: 28px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &:last-child {

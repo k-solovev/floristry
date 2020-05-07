@@ -5,21 +5,40 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+  border-top: 1px solid rgba(255, 255, 255 , .3);
+  }
 }
 
 .footer__menu {
   list-style: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .footer__nav {
   border-top: 1px solid rgba(255, 255, 255 , .3);
   padding-top: 30px;
   margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    border-top: none;
+    margin-bottom: 30px;
+  }
 }
 
 .footer__item {
   margin-bottom: 10px;
   display: flex;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
 }
 
 .footer__link {
@@ -30,5 +49,14 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &:hover {
+    color: rgba(255, 255, 255 , 1);
   }
 }

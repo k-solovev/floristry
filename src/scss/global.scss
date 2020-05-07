@@ -33,6 +33,13 @@ button:focus {
     padding-right: 40px;
     padding-left: 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .overlay {

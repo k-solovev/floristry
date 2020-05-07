@@ -1,7 +1,6 @@
 .popup-order {
   width: 288px;
   min-height: 426px;
-  padding: 62px 20px 52px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -11,7 +10,29 @@
   @media (min-width: $tablet-width) {
     width: 464px;
     min-height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 716px;
+    min-height: 444px;
+    background-image: url("../img/popup_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+}
+
+.popup-order__content {
+  width: 100%;
+  padding: 62px 20px 52px;
+
+  @media (min-width: $tablet-width) {
     padding: 104px 78px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 381px;
+    padding: 66px;
+    margin-left: auto;
   }
 }
 
@@ -57,6 +78,12 @@
     line-height: 50px;
     margin-bottom: 70px;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 35px;
+  }
 }
 
 .popup-order__input {
@@ -71,6 +98,10 @@
     margin-bottom: 24px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 20px;
+  }
+
   &::-webkit-input-placeholder {
     color: white;
     font-size: 14px;
@@ -80,6 +111,11 @@
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 14px;
+      line-height: 15px;
     }
   }
 
@@ -111,5 +147,10 @@
   @media (min-width: $tablet-width) {
     font-size: 15px;
     line-height: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 11px;
+    line-height: 12px;
   }
 }
