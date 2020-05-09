@@ -1,13 +1,117 @@
-.slider__window {
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
   margin-bottom: 20px;
+}
+
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+}
+
+/* Слайд */
+.slick-slide{
+  outline: none;
+
+  @media (min-width: $tablet-width) {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Точки (булиты) */
+.slick-dots{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 288px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 138px;
+  }
+}
+
+.slick-dots li{
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+/* Активная точка */
+.slick-dots li.slick-active{
+  background-color: rgba( 255, 255, 255, 1);
+}
+
+/* Элемент точки */
+.slick-dots li button{
+  font-size: 0;
+  display: block;
+  border-radius: 2px;
+  border: none;
+  width: 55px;
+  height: 3px;
+  background-color: rgba( 255, 255, 255, .3);
+}
+
+.slider {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .slider__elem {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 330px;
+    height: 450px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 60px;
+    overflow: hidden;
+  }
+
+  &:last-child {
+    @media (min-width: $desktop-width) {
+      margin-right: 0;
+    }
+  }
+
+  &:hover .slider__link {
+    bottom: 20px;
+  }
+
+  &:hover .slider__text {
+    bottom: 95px;
+  }
+
+  &:hover .slider__img {
+    opacity: 0.6;
+  }
+}
+
+.slider__wrapper {
+  @media (min-width: $desktop-width) {
+    background-color: black;
+  }
 }
 
 .slider__img {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .slider__num {
@@ -36,20 +140,27 @@
   font-size: 16px;
   line-height: 27px;
   letter-spacing: 0.1em;
+  transition: .4s all linear;
 }
 
-.slider__control {
-  display: flex;
-  justify-content: space-between;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.slider__link {
+  display: none;
 
-.slider__btn {
-  display: block;
-  border-radius: 2px;
-  width: 55px;
-  height: 3px;
-  background-color: rgba( 255, 255, 255, .3);
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    padding: 19px 0;
+    position: absolute;
+    left: 20px;
+    bottom: -55px;
+    transition: .4s all linear;
+  }
 }

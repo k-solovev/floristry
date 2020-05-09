@@ -317,7 +317,9 @@ body {
   font-style: normal;
   font-weight: normal;
   box-sizing: border-box;
-  color: white; }
+  color: white;
+  width: 100vw;
+  overflow-x: hidden; }
 
 *, *::before, *::after {
   box-sizing: inherit;
@@ -358,7 +360,12 @@ button:focus {
   z-index: 50; }
 
 .scroll-hidden {
-  overflow: hidden; }
+  overflow: hidden;
+  padding-right: calc(100vw - 100%); }
+
+.blur {
+  -webkit-filter: blur(5px);
+          filter: blur(5px); }
 
 .visually-hidden {
   position: absolute;
@@ -451,6 +458,8 @@ button:focus {
     @media (min-width: 1920px) {
       .header__burger::after {
         bottom: -7px; } }
+  .header__burger:hover {
+    cursor: pointer; }
   .header__burger--active::before {
     transform: rotate(45deg);
     top: 5px; }
@@ -555,7 +564,8 @@ button:focus {
   @media (min-width: 1920px) {
     .promo {
       background-image: url("../img/promo_bg_desktop.jpg");
-      min-height: 1019px;
+      height: 100vh;
+      min-height: 1018px;
       position: relative; } }
   @media (min-width: 1920px) {
     .promo::before {
@@ -721,15 +731,127 @@ button:focus {
   line-height: 34px;
   letter-spacing: 0.06em;
   margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    .catalog__header {
+      font-size: 30px;
+      line-height: 33px;
+      text-align: center;
+      margin-bottom: 52px;
+      position: relative; } }
+  @media (min-width: 1920px) {
+    .catalog__header {
+      margin-bottom: 120px; } }
+  @media (min-width: 768px) {
+    .catalog__header:before {
+      content: "";
+      width: 85px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%); } }
+  @media (min-width: 1920px) {
+    .catalog__header:after {
+      content: "Каталог услуг";
+      width: 100%;
+      font-size: 220px;
+      line-height: 243px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 0.03;
+      position: absolute;
+      bottom: -230px;
+      left: 0; } }
 
-.slider__window {
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
   margin-bottom: 20px; }
+
+/* Лента слайдов */
+.slick-track {
+  display: flex; }
+
+/* Слайд */
+.slick-slide {
+  outline: none; }
+  @media (min-width: 768px) {
+    .slick-slide {
+      max-width: 330px;
+      margin-left: auto;
+      margin-right: auto; } }
+
+/* Точки (булиты) */
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 288px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 768px) {
+    .slick-dots {
+      max-width: 138px; } }
+
+.slick-dots li {
+  margin-right: 12px; }
+  .slick-dots li:last-child {
+    margin-right: 0; }
+
+/* Активная точка */
+.slick-dots li.slick-active {
+  background-color: white; }
+
+/* Элемент точки */
+.slick-dots li button {
+  font-size: 0;
+  display: block;
+  border-radius: 2px;
+  border: none;
+  width: 55px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3); }
+
+@media (min-width: 1920px) {
+  .slider {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto; } }
 
 .slider__elem {
   position: relative; }
+  @media (min-width: 768px) {
+    .slider__elem {
+      width: 330px;
+      height: 450px; } }
+  @media (min-width: 1920px) {
+    .slider__elem {
+      margin-right: 60px;
+      overflow: hidden; } }
+  @media (min-width: 1920px) {
+    .slider__elem:last-child {
+      margin-right: 0; } }
+  .slider__elem:hover .slider__link {
+    bottom: 20px; }
+  .slider__elem:hover .slider__text {
+    bottom: 95px; }
+  .slider__elem:hover .slider__img {
+    opacity: 0.6; }
+
+@media (min-width: 1920px) {
+  .slider__wrapper {
+    background-color: black; } }
 
 .slider__img {
   width: 100%; }
+  @media (min-width: 768px) {
+    .slider__img {
+      width: auto; } }
 
 .slider__num {
   font-size: 20px;
@@ -753,21 +875,28 @@ button:focus {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 27px;
-  letter-spacing: 0.1em; }
+  letter-spacing: 0.1em;
+  transition: .4s all linear; }
 
-.slider__control {
-  display: flex;
-  justify-content: space-between;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto; }
-
-.slider__btn {
-  display: block;
-  border-radius: 2px;
-  width: 55px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.3); }
+.slider__link {
+  display: none; }
+  @media (min-width: 1920px) {
+    .slider__link {
+      display: block;
+      width: 200px;
+      height: 50px;
+      background-color: white;
+      color: black;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 13px;
+      letter-spacing: 0.15em;
+      text-align: center;
+      padding: 19px 0;
+      position: absolute;
+      left: 20px;
+      bottom: -55px;
+      transition: .4s all linear; } }
 
 .sales {
   background-color: #3B181E;
@@ -877,7 +1006,8 @@ button:focus {
       margin-left: 0; } }
   .sales__btn:hover {
     background: white;
-    color: black; }
+    color: black;
+    cursor: pointer; }
 
 .footer {
   background-color: #3B181E;
@@ -945,6 +1075,7 @@ button:focus {
       width: 716px;
       min-height: 444px;
       background-image: url("../img/popup_bg.jpg");
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: left top; } }
 
@@ -966,6 +1097,8 @@ button:focus {
   position: absolute;
   top: 10px;
   right: 10px; }
+  .popup-order__close:hover {
+    cursor: pointer; }
   .popup-order__close::before, .popup-order__close::after {
     content: "";
     width: 30px;

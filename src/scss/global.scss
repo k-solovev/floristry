@@ -1,3 +1,8 @@
+html {
+  @media (min-width: $desktop-width) {
+  }
+}
+
 body {
   font-family: "Forum", "Aerial", sans-serif;
   font-size: 18px;
@@ -5,6 +10,8 @@ body {
   font-weight: normal;
   box-sizing: border-box;
   color: white;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -54,6 +61,11 @@ button:focus {
 
 .scroll-hidden {
   overflow: hidden;
+  padding-right: calc(100vw - 100%);
+}
+
+.blur {
+  filter: blur(5px);
 }
 
 .visually-hidden {
