@@ -1,103 +1,73 @@
-const burger = document.querySelector('.header__burger');
-const logo = document.querySelector('.header__logo');
-const menu = document.querySelector('.header__navigation');
-const orderBtn = document.querySelector('.sales__btn');
-const overlay = document.querySelector('.overlay');
-const body = document.querySelector('.document-body');
-const popupWindow = document.querySelector('.popup-order');
-const popupCloseBtn = document.querySelector('.popup-order__close');
-const mouseIcon = document.querySelector('.promo__mouse');
-const mouseWheelIcon = document.querySelector('.promo__mouse svg path');
+$(document).ready(function () {
+  // бургер
+  $('.header__burger').on('click', function (e) {
+    $('.header__logo').toggleClass('header__logo--active');
+    $(this).toggleClass('header__burger--active');
+    $('.header__navigation').toggleClass('header__navigation--active');
+  });
 
-// бургер
-burger.addEventListener('click', function(evt) {
-  logo.classList.toggle('header__logo--active');
-  burger.classList.toggle('header__burger--active');
-  menu.classList.toggle('header__navigation--active');
-});
-
-$(document).ready(function() {
   // модальное окно
   // функция открытия модального окна
-  const openPopup = e => {
+  const openPopup = () => {
     $('.overlay').removeClass('visually-hidden');
     $('.document-body').addClass('scroll-hidden');
     $('.main').addClass('blur');
     $('.footer').addClass('blur');
-  }
+  };
 
   // функция закрытия модального окна
-  const closePopup = function () {
+  const closePopup = () => {
     $('.overlay').addClass('visually-hidden');
     $('.document-body').removeClass('scroll-hidden');
     $('.main').removeClass('blur');
     $('.footer').removeClass('blur');
-  }
-
-  console.log(openPopup);
-
-
+  };
 
   // открытие
-  $('.sales__btn').on('click', function(e) {
-    $('.overlay').removeClass('visually-hidden');
-    $('.document-body').addClass('scroll-hidden');
-    $('.main').addClass('blur');
-    $('.footer').addClass('blur');
-  
+  $('.sales__btn').on('click', (e) => {
+    openPopup();
+
     // закрытие на крестик
-    $('.popup-order__close').on('click', function(e) {
-      $('.overlay').addClass('visually-hidden');
-      $('.document-body').removeClass('scroll-hidden');
-      $('.main').removeClass('blur');
-      $('.footer').removeClass('blur');
-    })
+    $('.popup-order__close').on('click', closePopup);
 
     // закрытие на клик вне окна
-    $('.document-body').on('mouseup', function(e) {
+    $('.document-body').on('mouseup', (e) => {
       const popupWindow = $('.popup-order');
-      if (e.target != popupWindow[0] && popupWindow.has(e.target).length === 0) {
-        $('.overlay').addClass('visually-hidden');
-        $('.document-body').removeClass('scroll-hidden');
-        $('.main').removeClass('blur');
-        $('.footer').removeClass('blur');
+      if (
+        e.target != popupWindow[0] &&
+        popupWindow.has(e.target).length === 0
+      ) {
+        closePopup();
       }
-    })
+    });
 
     // закрытие на ESC
-    $('.document-body').on('keyup', function(e) {
+    $('.document-body').on('keyup', (e) => {
       if (e.keyCode === 27) {
-        $('.overlay').addClass('visually-hidden');
-        $('.document-body').removeClass('scroll-hidden');
-        $('.main').removeClass('blur');
-        $('.footer').removeClass('blur');
+        closePopup();
       }
-    })
-  })
+    });
+  });
 
   // работа слайдера
   $('.slider').slick({
     mobileFirst: true,
-    arrows:false,
-    dots:true,
-    slidesToShow:1,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
 
-    responsive:[
+    responsive: [
       {
         breakpoint: 767,
         settings: {
-          slidesToShow:2,
-          slidesToScroll:2
-        }
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
       },
       {
         breakpoint: 1919,
-        settings: 'unslick'
-      }
-    ]
+        settings: 'unslick',
+      },
+    ],
   });
 });
-
-// анимация иконки мыши при наведении
-mouseIcon.addEventListener('mouseover', evt => mouseWheelIcon.setAttribute('d', 'M19 29.46484L19 18.9296'));
-mouseIcon.addEventListener('mouseout', evt => mouseWheelIcon.setAttribute('d', 'M19 9.46484L19 18.9296'));

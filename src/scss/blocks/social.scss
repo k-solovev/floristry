@@ -22,8 +22,11 @@
     background-color: transparent;
   }
 
-  &:hover .icon-hover {
+  &:hover .fill-hover {
     fill: black;
+  }
+
+  &:hover .stroke-hover {
     stroke: black;
   }
 

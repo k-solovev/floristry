@@ -79,6 +79,13 @@
   @media (min-width: $desktop-width) {
     margin-right: 60px;
     overflow: hidden;
+
+    //test
+    width: 350px;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &:last-child {
@@ -87,8 +94,19 @@
     }
   }
 
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+
   &:hover .slider__link {
     bottom: 20px;
+  }
+
+  //test
+  &:hover .slider__num {
+    top: 32px;
+    left: 109px;
   }
 
   &:hover .slider__text {
@@ -102,6 +120,7 @@
 
 .slider__wrapper {
   @media (min-width: $desktop-width) {
+    height: 450px;
     background-color: black;
   }
 }
@@ -120,6 +139,12 @@
   position: absolute;
   top: 23px;
   left: 100px;
+
+  //test
+  @media (min-width: $desktop-width) {
+    top: 33px;
+    left: 110px;
+  }
 
   &:before {
     content: "";
@@ -141,6 +166,12 @@
   line-height: 27px;
   letter-spacing: 0.1em;
   transition: .4s all linear;
+
+  //test
+  @media (min-width: $desktop-width) {
+    left: 30px;
+    bottom: 25px;
+  }
 }
 
 .slider__link {

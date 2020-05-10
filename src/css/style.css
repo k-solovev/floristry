@@ -311,6 +311,10 @@ template {
   font-weight: normal;
   font-style: normal; }
 
+@media (min-width: 1920px) {
+  html {
+    scroll-behavior: smooth; } }
+
 body {
   font-family: "Forum", "Aerial", sans-serif;
   font-size: 18px;
@@ -584,17 +588,19 @@ button:focus {
   background-image: url("../img/promo_arrow_mobile.svg");
   margin-left: auto;
   margin-right: auto;
-  position: relative; }
+  position: relative;
+  color: white;
+  transition: .5s; }
   @media (min-width: 1920px) {
     .promo__arrow {
       position: absolute;
-      bottom: 10px;
+      bottom: 20px;
       right: 0;
       transition: .3s all linear; } }
   .promo__arrow:hover {
     bottom: 0; }
   .promo__arrow:hover:before {
-    bottom: 120px; }
+    bottom: 130px; }
   @media (min-width: 1920px) {
     .promo__arrow:before {
       transition: .3s all linear;
@@ -669,7 +675,7 @@ button:focus {
       margin-bottom: 0;
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 10px;
       display: flex;
       flex-direction: column; } }
 
@@ -679,9 +685,13 @@ button:focus {
     .promo__mouse {
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%); } }
+  .promo__mouse:hover svg path {
+    d: path("M19 19.46484L19 28.9296"); }
+  .promo__mouse svg path {
+    transition: .5s; }
 
 .social {
   display: flex;
@@ -703,8 +713,9 @@ button:focus {
       width: 50px;
       height: 50px;
       background-color: transparent; } }
-  .social__btn:hover .icon-hover {
-    fill: black;
+  .social__btn:hover .fill-hover {
+    fill: black; }
+  .social__btn:hover .stroke-hover {
     stroke: black; }
   .social__btn svg {
     width: 18px;
@@ -832,12 +843,23 @@ button:focus {
   @media (min-width: 1920px) {
     .slider__elem {
       margin-right: 60px;
-      overflow: hidden; } }
+      overflow: hidden;
+      width: 350px;
+      height: 470px;
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
   @media (min-width: 1920px) {
     .slider__elem:last-child {
       margin-right: 0; } }
+  .slider__elem:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer; }
   .slider__elem:hover .slider__link {
     bottom: 20px; }
+  .slider__elem:hover .slider__num {
+    top: 32px;
+    left: 109px; }
   .slider__elem:hover .slider__text {
     bottom: 95px; }
   .slider__elem:hover .slider__img {
@@ -845,6 +867,7 @@ button:focus {
 
 @media (min-width: 1920px) {
   .slider__wrapper {
+    height: 450px;
     background-color: black; } }
 
 .slider__img {
@@ -859,6 +882,10 @@ button:focus {
   position: absolute;
   top: 23px;
   left: 100px; }
+  @media (min-width: 1920px) {
+    .slider__num {
+      top: 33px;
+      left: 110px; } }
   .slider__num:before {
     content: "";
     width: 70px;
@@ -877,6 +904,10 @@ button:focus {
   line-height: 27px;
   letter-spacing: 0.1em;
   transition: .4s all linear; }
+  @media (min-width: 1920px) {
+    .slider__text {
+      left: 30px;
+      bottom: 25px; } }
 
 .slider__link {
   display: none; }

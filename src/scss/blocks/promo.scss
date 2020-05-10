@@ -40,10 +40,12 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  color: white;
+  transition: .5s;
 
   @media (min-width: $desktop-width) {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     right: 0;
     transition: .3s all linear;
   }
@@ -53,7 +55,7 @@
   }
 
   &:hover:before {
-    bottom: 120px;
+    bottom: 130px;
   }
 
   &:before {
@@ -143,7 +145,7 @@
     margin-bottom: 0;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 10px;
     display: flex;
     flex-direction: column;
   }
@@ -155,8 +157,16 @@
   @media (min-width: $desktop-width) {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  &:hover svg path {
+    d: path("M19 19.46484L19 28.9296");
+  }
+
+  & svg path {
+    transition: .5s;
   }
 }

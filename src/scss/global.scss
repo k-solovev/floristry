@@ -1,5 +1,6 @@
 html {
   @media (min-width: $desktop-width) {
+    scroll-behavior: smooth;
   }
 }
 
