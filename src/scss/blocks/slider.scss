@@ -5,12 +5,12 @@
 }
 
 /* Лента слайдов */
-.slick-track{
+.slick-track {
   display: flex;
 }
 
 /* Слайд */
-.slick-slide{
+.slick-slide {
   outline: none;
 
   @media (min-width: $tablet-width) {
@@ -21,7 +21,7 @@
 }
 
 /* Точки (булиты) */
-.slick-dots{
+.slick-dots {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   }
 }
 
-.slick-dots li{
+.slick-dots li {
   margin-right: 12px;
 
   &:last-child {
@@ -43,19 +43,19 @@
 }
 
 /* Активная точка */
-.slick-dots li.slick-active{
-  background-color: rgba( 255, 255, 255, 1);
+.slick-dots li.slick-active {
+  background-color: rgba(255, 255, 255, 1);
 }
 
 /* Элемент точки */
-.slick-dots li button{
+.slick-dots li button {
   font-size: 0;
   display: block;
   border-radius: 2px;
   border: none;
   width: 55px;
   height: 3px;
-  background-color: rgba( 255, 255, 255, .3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .slider {
@@ -72,15 +72,14 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    width: 330px;
-    height: 450px;
+    width: 47.96%;
+    height: auto;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 60px;
     overflow: hidden;
 
-    //test
     width: 350px;
     height: 470px;
     display: flex;
@@ -95,26 +94,35 @@
   }
 
   &:hover {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
+    @media (min-width: $desktop-width) {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
   }
 
   &:hover .slider__link {
-    bottom: 20px;
+    @media (min-width: $desktop-width) {
+      bottom: 20px;
+    }
   }
 
-  //test
   &:hover .slider__num {
-    top: 32px;
-    left: 109px;
+    @media (min-width: $desktop-width) {
+      top: 32px;
+      left: 109px;
+    }
   }
 
   &:hover .slider__text {
-    bottom: 95px;
+    @media (min-width: $desktop-width) {
+      bottom: 95px;
+    }
   }
 
   &:hover .slider__img {
-    opacity: 0.6;
+    @media (min-width: $desktop-width) {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -127,6 +135,7 @@
 
 .slider__img {
   width: 100%;
+  height: auto;
 
   @media (min-width: $tablet-width) {
     width: auto;
@@ -140,14 +149,13 @@
   top: 23px;
   left: 100px;
 
-  //test
   @media (min-width: $desktop-width) {
     top: 33px;
     left: 110px;
   }
 
   &:before {
-    content: "";
+    content: '';
     width: 70px;
     height: 1px;
     background-color: white;
@@ -165,9 +173,8 @@
   font-size: 16px;
   line-height: 27px;
   letter-spacing: 0.1em;
-  transition: .4s all linear;
+  transition: 0.4s all linear;
 
-  //test
   @media (min-width: $desktop-width) {
     left: 30px;
     bottom: 25px;
@@ -192,6 +199,6 @@
     position: absolute;
     left: 20px;
     bottom: -55px;
-    transition: .4s all linear;
+    transition: 0.4s all linear;
   }
 }

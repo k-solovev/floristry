@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="preload"
+      href="fonts/Forum-Regular.woff2"
+      as="font"
+      crossorigin
+    />
     <title>Весна всегда</title>
   </head>
-  <body class="document-body">
+  <body class="index-page">
     <header class="header">
       <div class="header__wrapper container">
         <div class="header__logo">
-          <a class="header__link" href="#">
+          <a class="header__link">
             <img
               class="header__img"
               src="img/mobile_logo.svg"
@@ -26,7 +32,7 @@
       </div>
       <nav class="header__navigation">
         <div class="header__logo">
-          <a class="header__link" href="#">
+          <a class="header__link">
             <img
               class="header__img"
               src="img/mobile_logo.svg"
@@ -38,25 +44,26 @@
         </div>
         <ul class="menu">
           <li class="menu__item">
-            <a href="#" class="menu__link menu__link--active"
-              >Свадебная флористика</a
+            <a class="menu__link menu__link--active">Свадебная флористика</a>
+          </li>
+          <li class="menu__item">
+            <a href="activity.html" class="menu__link"
+              >Букеты на&nbsp;любые мероприятия</a
             >
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Букеты на&nbsp;любые мероприятия</a>
+            <a href="wedding.html" class="menu__link">Букеты невесты</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Букеты невесты</a>
+            <a href="compositions.html" class="menu__link">Композиции</a>
           </li>
           <li class="menu__item">
-            <a href="#" class="menu__link">Композиции</a>
-          </li>
-          <li class="menu__item">
-            <a href="#" class="menu__link">Оформление мероприятий</a>
+            <a href="decor.html" class="menu__link">Оформление мероприятий</a>
           </li>
         </ul>
       </nav>
     </header>
+
     <main class="main">
       <h1 class="visually-hidden">Магазин флористики</h1>
       <section class="promo">
@@ -97,8 +104,8 @@
                 />
               </svg>
             </a>
-            <a class="social__btn social__btn--fb" href="#"
-              ><svg
+            <a class="social__btn social__btn--fb" href="#">
+              <svg
                 width="25"
                 height="25"
                 viewBox="0 0 25 25"
@@ -203,13 +210,25 @@
               <div class="slider__wrapper">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 768px)"
-                    srcset="..\img\slider_tablet01.jpg"
+                    srcset="../img/slider_tablet01.webp"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="../img/slider_mobile01.webp"
+                  />
+                  <source
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                    srcset="../img/slider_tablet01.jpg"
                   />
                   <img
                     class="slider__img"
-                    src="..\img\slider_mobile01.jpg"
+                    src="../img/slider_mobile01.jpg"
                     alt="Букет невесты и свадебное оформление"
+                    width="288"
+                    height="393"
                   />
                 </picture>
               </div>
@@ -223,13 +242,25 @@
               <div class="slider__wrapper">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 768px)"
-                    srcset="..\img\slider_tablet02.jpg"
+                    srcset="../img/slider_tablet02.webp"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="../img/slider_mobile02.webp"
+                  />
+                  <source
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                    srcset="../img/slider_tablet02.jpg"
                   />
                   <img
                     class="slider__img"
-                    src="..\img\slider_mobile02.jpg"
+                    src="../img/slider_mobile02.jpg"
                     alt="Букеты на торжества"
+                    width="288"
+                    height="393"
                   />
                 </picture>
               </div>
@@ -241,13 +272,25 @@
               <div class="slider__wrapper">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 768px)"
-                    srcset="..\img\slider_tablet03.jpg"
+                    srcset="../img/slider_tablet03.webp"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="../img/slider_mobile03.webp"
+                  />
+                  <source
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                    srcset="../img/slider_tablet03.jpg"
                   />
                   <img
                     class="slider__img"
-                    src="..\img\slider_mobile03.jpg"
+                    src="../img/slider_mobile03.jpg"
                     alt="Композиции"
+                    width="288"
+                    height="393"
                   />
                 </picture>
               </div>
@@ -259,13 +302,25 @@
               <div class="slider__wrapper">
                 <picture>
                   <source
+                    type="image/webp"
                     media="(min-width: 768px)"
-                    srcset="..\img\slider_tablet04.jpg"
+                    srcset="../img/slider_tablet04.webp"
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="../img/slider_mobile04.webp"
+                  />
+                  <source
+                    type="image/jpg"
+                    media="(min-width: 768px)"
+                    srcset="../img/slider_tablet04.jpg"
                   />
                   <img
                     class="slider__img"
-                    src="..\img\slider_mobile04.jpg"
+                    src="../img/slider_mobile04.jpg"
                     alt="Оформление мероприятий"
+                    width="288"
+                    height="393"
                   />
                 </picture>
               </div>
@@ -281,10 +336,23 @@
         <div class="sales__wrapper container">
           <picture>
             <source
+              type="image/webp"
+              media="(min-width: 1920px)"
+              srcset="img/sales_img_desktop.webp"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/sales_img_tablet.webp"
+            />
+            <source type="image/webp" srcset="../img/sales_img_mobile.webp" />
+            <source
+              type="image/jpg"
               media="(min-width: 1920px)"
               srcset="img/sales_img_desktop.jpg"
             />
             <source
+              type="image/jpg"
               media="(min-width: 768px)"
               srcset="img/sales_img_tablet.jpg"
             />
@@ -292,6 +360,8 @@
               class="sales__img"
               src="../img/sales_img_mobile.jpg"
               alt="Картинка акционных предложений"
+              width="288"
+              height="170"
             />
           </picture>
           <div class="sales__info">
@@ -311,21 +381,23 @@
         <nav class="footer__nav">
           <ul class="footer__menu">
             <li class="footer__item">
-              <a href="#" class="footer__link">Свадебная флористика</a>
+              <a class="footer__link">Свадебная флористика</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link"
+              <a href="activity.html" class="footer__link"
                 >Букеты на&nbsp;любые мероприятия</a
               >
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Букеты невесты</a>
+              <a href="wedding.html" class="footer__link">Букеты невесты</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Композиции</a>
+              <a href="compositions.html" class="footer__link">Композиции</a>
             </li>
             <li class="footer__item">
-              <a href="#" class="footer__link">Оформление мероприятий</a>
+              <a href="decor.html" class="footer__link"
+                >Оформление мероприятий</a
+              >
             </li>
           </ul>
         </nav>
@@ -460,6 +532,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/slider_index-page.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

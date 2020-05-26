@@ -1,0 +1,15 @@
+.activity-page {
+  @media (min-width: $desktop-width) {
+    min-height: 1080px;
+  }
+
+  & main {
+    height: calc(100% - 60px);
+  }
+
+  & .footer {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}

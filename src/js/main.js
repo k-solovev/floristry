@@ -10,7 +10,7 @@ $(document).ready(function () {
   // функция открытия модального окна
   const openPopup = () => {
     $('.overlay').removeClass('visually-hidden');
-    $('.document-body').addClass('scroll-hidden');
+    $('.index-page').addClass('scroll-hidden');
     $('.main').addClass('blur');
     $('.footer').addClass('blur');
   };
@@ -18,7 +18,7 @@ $(document).ready(function () {
   // функция закрытия модального окна
   const closePopup = () => {
     $('.overlay').addClass('visually-hidden');
-    $('.document-body').removeClass('scroll-hidden');
+    $('.index-page').removeClass('scroll-hidden');
     $('.main').removeClass('blur');
     $('.footer').removeClass('blur');
   };
@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.popup-order__close').on('click', closePopup);
 
     // закрытие на клик вне окна
-    $('.document-body').on('mouseup', (e) => {
+    $('.index-page').on('mouseup', (e) => {
       const popupWindow = $('.popup-order');
       if (
         e.target != popupWindow[0] &&
@@ -42,32 +42,10 @@ $(document).ready(function () {
     });
 
     // закрытие на ESC
-    $('.document-body').on('keyup', (e) => {
+    $('.index-page').on('keyup', (e) => {
       if (e.keyCode === 27) {
         closePopup();
       }
     });
-  });
-
-  // работа слайдера
-  $('.slider').slick({
-    mobileFirst: true,
-    arrows: false,
-    dots: true,
-    slidesToShow: 1,
-
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 1919,
-        settings: 'unslick',
-      },
-    ],
   });
 });

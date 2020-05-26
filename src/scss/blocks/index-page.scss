@@ -1,0 +1,9 @@
+.index-page {
+  & .header {
+    &::before {
+      @media (min-width: $tablet-width) {
+        content: none;
+      }
+    }
+  }
+}

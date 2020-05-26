@@ -17,6 +17,10 @@
     z-index: 1;
 
     @media (min-width: $tablet-width) {
+      height: 112px;
+    }
+
+    @media (min-width: $desktop-width) {
       content: none;
     }
   }
@@ -151,7 +155,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    top: -1050px;
+    top: -1100px;
   }
 
 & .header__logo {
